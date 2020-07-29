@@ -1,0 +1,23 @@
+{
+  "name": "shanyaodan",
+  "version": "0.0.1",
+  "description": "一个UI框架",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IvanXing/ShanYaoDan-UI.git"
+  },
+  "keywords": [
+    "Vue",
+    "UI"
+  ],
+  "author": "IvanXing",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IvanXing/ShanYaoDan-UI/issues"
+  },
+  "homepage": "https://github.com/IvanXing/ShanYaoDan-UI#readme"
+}
