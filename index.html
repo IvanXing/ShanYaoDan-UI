@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <title>UI</title>
   <style>
-    * {margin: 0; padding: 0; box-sizing: border-box;}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     html {
       --button-height: 32px;
       --font-size: 14px;
@@ -15,24 +20,38 @@
       --border-color: #999;
       --border-color-hover: #666;
     }
+
     #app {
       margin: 20px;
     }
+
     body {
       font-size: var(--font-size);
     }
   </style>
   <style>
-
+    .icon {
+      width: 1em;
+      height: 1em
+    }
   </style>
 </head>
 <body>
 
 <div id='app'>
-  <s-button></s-button>
+  <s-button>
+    按钮
+  </s-button>
+  <s-button icon="settings">
+    按钮
+  </s-button>
+  <s-button icon="settings" icon-position="right">
+    按钮
+  </s-button>
 </div>
 
 <script src='./src/app.js'></script>
+<script src='//at.alicdn.com/t/font_1977626_oeylf0eq2ii.js'></script>
 
 </body>
 </html>
