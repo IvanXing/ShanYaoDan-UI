@@ -18,7 +18,7 @@
 			--border-radius: 4px;
 			--color: #333;
 			--border-color: #999;
-			--border-color-hover: #666;
+			--border-color-hover: red;
 		}
 
 		#app {
@@ -48,6 +48,11 @@
 	<s-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
 		按钮
 	</s-button>
+	<s-button-group>
+		<s-button icon="left">上一页</s-button>
+		<s-button>更多</s-button>
+		<s-button icon="right" icon-position="right">下一页</s-button>
+	</s-button-group>
 	<s-icon name="download"></s-icon>
 </div>
 
