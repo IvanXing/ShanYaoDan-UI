@@ -1,6 +1,11 @@
 <template>
 	<div class="wrapper" :class="{error}">
-		<input type="text" :value="value" :disabled="disabled" :readonly="readonly">
+		<input type="text" :value="value" :disabled="disabled" :readonly="readonly"
+		       @change="$emit('change', $event)"
+		       @input="$emit('input', $event)"
+		       @focus="$emit('focus', $event)"
+		       @blur="$emit('blur', $event)"
+		>
 		<template v-if="error">
 			<icon name="error" class="icon-error"></icon>
 			<span class="errorMessage">{{error}}</span>
@@ -10,6 +15,7 @@
 
 <script>
 	import Icon from './icon'
+
 	export default {
 		components: {Icon},
 		name: 'ShanyaodanInput',
@@ -45,7 +51,9 @@
 		display: inline-flex;
 		align-items: center;
 		/*解决flex中间没有空隙*/
-		> :not(:last-child) {margin-right: .5em; }
+		> :not(:last-child) {
+			margin-right: .5em;
+		}
 		> input {
 			height: $height;
 			border: 1px solid $border-color;
@@ -67,9 +75,15 @@
 		}
 
 		&.error {
-			> input { border-color: $red; }
+			> input {
+				border-color: $red;
+			}
 		}
-		.icon-error { fill: $red; }
-		.errorMessage { color: $red; }
+		.icon-error {
+			fill: $red;
+		}
+		.errorMessage {
+			color: $red;
+		}
 	}
 </style>

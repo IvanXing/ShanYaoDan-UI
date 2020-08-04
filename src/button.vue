@@ -13,7 +13,7 @@
 	import Icon from './icon';
 	export default {
 		name: 'ShanyaodanButton',
-		component: {
+		components: {
 			's-icon': Icon,
 		},
 		// props: ['icon', 'iconPosition']

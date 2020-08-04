@@ -39,12 +39,12 @@
 
 <div id='app'>
 	<div class="box">
-		<s-input value="张三" disabled></s-input>
-		<s-input value="李四" readonly></s-input>
-		<s-input value="王五"></s-input>
+		<!--<s-input value="张三" disabled></s-input>-->
+		<!--<s-input value="李四" readonly></s-input>-->
+		<s-input value="王五" @change="inputChange"></s-input>
 	</div>
 	<div class="box">
-		<s-input value="李四" error="姓名不能少于两个字"></s-input>
+		<!--<s-input value="李四" error="姓名不能少于两个字"></s-input>-->
 	</div>
 	<div style="margin: 20px;">
 		<s-button :loading="loading1" @click="loading1 = !loading1">
