@@ -12,6 +12,7 @@
 <script>
 	import Icon from './icon';
 	export default {
+		name: 'ShanyaodanButton',
 		component: {
 			's-icon': Icon,
 		},
@@ -33,7 +34,7 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	.s-button {
 
 		/*loading动画*/
