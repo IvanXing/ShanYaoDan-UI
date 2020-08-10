@@ -31,13 +31,61 @@
 	</style>
 	<style>
 		.box{
-			margin: 20px;
+			margin: 20px; 
 		}
 	</style>
 </head>
 <body>
+<style>
+	.row {
+		display: flex;
+	}
+	.col {
+		height: 100px;
+		background: grey;
+		width: 50%;
+		border: 1px solid red;
+	}
+	.col[data-span="2"]{
+		width: 8.333333%;
+	}
+	.col[data-span="3"]{
+		width: 8.333333%;
+	}
+	.col[data-span="4"]{
+		width: 8.333333%;
+	}
+	.col[data-span="5"]{
+		width: 8.333333%;
+	}
+	/*写满24个 有点蠢*/
+	.col[data-span="22"]{
+		width: 91.666667%;
+	}
+</style>
 
 <div id='app'>
+	
+	<div class="row">
+		<div class="col"></div>
+		<div class="col"></div>
+	</div>
+	<div class="row">
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+	</div>
+	<div class="row">
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+	</div>
+	<div class="row">
+		<div class="col" data-span="2"></div>
+		<div class="col" data-span="22"></div>
+	</div>
+	
 	<div class="box">
 		<s-input v-model="message"></s-input>
 		<p>{{message}}</p>
