@@ -35,7 +35,6 @@ export default {
 </script>
 <style scoped lang="scss">
 .col {
-  width: 50%;
   //scss循环，col-col-1 #{} 是scss的取值操作  对标js ${}
   // 生成 col.col-1
   $class-prefix: col-;
