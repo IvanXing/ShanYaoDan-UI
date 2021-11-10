@@ -1,91 +1,96 @@
 <!DOCTYPE html>
 <html lang="zh-Hans">
 <head>
-	<meta charset="UTF-8">
-	<title>UI</title>
-	<style>
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-		}
-    img {max-width: 100%;}
-		html {
-			--button-height: 32px;
-			--font-size: 14px;
-			--button-bg: white;
-			--button-active-bg: #eee;
-			--border-radius: 4px;
-			--color: #333;
-			--border-color: #999;
-			--border-color-hover: #666;
-		}
+  <meta charset="UTF-8">
+  <title>UI</title>
+  <style>
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
 
-		#app {
-			margin: 20px;
-		}
+      img {
+          max-width: 100%;
+      }
 
-		body {
-			font-size: var(--font-size);
-		}
-	</style>
-	<style>
-		.box{
-			margin: 20px;
-		}
-	</style>
+      html {
+          --button-height: 32px;
+          --font-size: 14px;
+          --button-bg: white;
+          --button-active-bg: #eee;
+          --border-radius: 4px;
+          --color: #333;
+          --border-color: #999;
+          --border-color-hover: #666;
+      }
+
+      #app {
+          margin: 20px;
+      }
+
+      body {
+          font-size: var(--font-size);
+      }
+  </style>
+  <style>
+      .box {
+          margin: 20px;
+      }
+
+      .demo {
+          background: #ddd;
+          border: 1px solid #666;
+          height: 100px;
+      }
+  </style>
 </head>
 <body>
 
-<div id='app' >
-  <div style="border: 1px solid black">
-    <s-row gutter="20">
-      <s-col>1</s-col>
-      <s-col>2</s-col>
-    </s-row>
-    <s-row gutter="20">
-      <s-col>1</s-col>
-      <s-col>2</s-col>
-      <s-col>3</s-col>
-    </s-row>
-    <s-row gutter="20">
-      <s-col>1</s-col>
-      <s-col>2</s-col>
-      <s-col>3</s-col>
-      <s-col>4</s-col>
-    </s-row>
-    <s-row gutter="20">
-      <s-col span="2">1</s-col>
-      <s-col span="22">2</s-col>
-    </s-row>
-    <s-row gutter="20">
-      <s-col span="4">1</s-col>
-      <s-col span="18" offset="2">2</s-col>
-    </s-row>
-  </div>
+<div id='app'>
+  <s-row>
+    <s-col span="24" :narrow-pc="{span:8}">
+      <div class="demo"></div>
+    </s-col>
+    <s-col span="24" :narrow-pc="{span:8}">
+      <div class="demo"></div>
+    </s-col>
+    <s-col span="24" :narrow-pc="{span:8}">
+      <div class="demo"></div>
+    </s-col>
+    <s-col span="24" :narrow-pc="{span:8}">
+      <div class="demo"></div>
+    </s-col>
+    <s-col span="24" :narrow-pc="{span:8}">
+      <div class="demo"></div>
+    </s-col>
+    <s-col span="24" :narrow-pc="{span:8}">
+      <div class="demo"></div>
+    </s-col>
+  </s-row>
 
-	<div class="box">
-		<s-input v-model="message"></s-input>
-		<p>{{message}}</p>
-		<button @click="message+=1">+1</button>
-	</div>
-	<div style="margin: 20px;">
-		<s-button :loading="loading1" @click="loading1 = !loading1">
-			按钮
-		</s-button>
-		<s-button icon="settings" :loading="loading2" @click="loading2 = !loading2">
-			按钮
-		</s-button>
-		<s-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
-			按钮
-		</s-button>
-		<s-button-group>
-			<s-button icon="left">上一页</s-button>
-			<s-button>更多</s-button>
-			<s-button icon="right" icon-position="right">下一页</s-button>
-		</s-button-group>
-		<s-icon name="download"></s-icon>
-	</div>
+  <div class="box">
+    <s-input v-model="message"></s-input>
+    <p>{{ message }}</p>
+    <button @click="message+=1">+1</button>
+  </div>
+  <div style="margin: 20px;">
+    <s-button :loading="loading1" @click="loading1 = !loading1">
+      按钮
+    </s-button>
+    <s-button icon="settings" :loading="loading2" @click="loading2 = !loading2">
+      按钮
+    </s-button>
+    <s-button icon="settings" icon-position="right" :loading="loading3" @click="loading3 = !loading3">
+      按钮
+    </s-button>
+    <s-button-group>
+      <s-button icon="left">上一页</s-button>
+      <s-button>更多</s-button>
+      <s-button icon="right" icon-position="right">下一页</s-button>
+    </s-button-group>
+    <s-icon name="download"></s-icon>
+  </div>
 </div>
 
 <script src='./src/app.js'></script>
