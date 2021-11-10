@@ -37,30 +37,32 @@
 </head>
 <body>
 
-<div id='app'>
-	<s-row>
-    <s-col>1</s-col>
-    <s-col>2</s-col>
-  </s-row>
-  <s-row>
-    <s-col>1</s-col>
-    <s-col>2</s-col>
-    <s-col>3</s-col>
-  </s-row>
-  <s-row>
-    <s-col>1</s-col>
-    <s-col>2</s-col>
-    <s-col>3</s-col>
-    <s-col>4</s-col>
-  </s-row>
-  <s-row>
-    <s-col span="2">1</s-col>
-    <s-col span="22">2</s-col>
-  </s-row>
-  <s-row>
-    <s-col span="4">1</s-col>
-    <s-col span="20">2</s-col>
-  </s-row>
+<div id='app' >
+  <div style="border: 1px solid black">
+    <s-row gutter="20">
+      <s-col>1</s-col>
+      <s-col>2</s-col>
+    </s-row>
+    <s-row gutter="20">
+      <s-col>1</s-col>
+      <s-col>2</s-col>
+      <s-col>3</s-col>
+    </s-row>
+    <s-row gutter="20">
+      <s-col>1</s-col>
+      <s-col>2</s-col>
+      <s-col>3</s-col>
+      <s-col>4</s-col>
+    </s-row>
+    <s-row gutter="20">
+      <s-col span="2">1</s-col>
+      <s-col span="22">2</s-col>
+    </s-row>
+    <s-row gutter="20">
+      <s-col span="4">1</s-col>
+      <s-col span="18" offset="2">2</s-col>
+    </s-row>
+  </div>
 
 	<div class="box">
 		<s-input v-model="message"></s-input>
